@@ -3,11 +3,11 @@
 
 /* Variables */
 :root {
-  --primary-ligth-color: #ffffff;
+  --primary-color: #ffffff;
   --primary-dark-color: #191919;
-  --second-ligth-color: #f1f1ef;
+  --second-color: #f1f1ef;
   --second-dark-color: #252525;
-  --text-ligth-color: #36362f;
+  --text-color: #36362f;
   --text-dark-color: #e2e2e2;
 }
 
@@ -23,10 +23,10 @@ html, body {
 }
 
 body {
-  background-color: var(--primary-dark-color);
+  background-color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
-  color: var(--text-dark-color);
+  color: var(--text-color);
 }
 
 /* Styles */
@@ -43,7 +43,7 @@ body {
 
 .timer .display {
   padding: 0 4rem;
-  background-color: var(--second-dark-color);
+  background-color: var(--second-color);
   border-radius: 15px;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
 }
@@ -54,10 +54,10 @@ body {
 }
 
 .timer .start-button {
-  color: var(--text-dark-color);
+  color: var(--text-color);
   font-size: 1.5rem;
   padding: 10px;
-  background-color: var(--second-dark-color);
+  background-color: var(--second-color);
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   border: none;
@@ -65,32 +65,71 @@ body {
 }
 
 /* sidebar */
-.menu-button {
+.open-menu-button {
   padding: 5px;
-  background: var(--second-dark-color);
+  background: var(--second-color);
   border-radius: 5px;
-  border: none;
-  cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 1;
+  border: none;
+  cursor: pointer;
 }
 
-.menu-button i {
-  color: var(--text-dark-color);
+.open-menu-button i {
+  width: 24px;
+  height: 24px;
+  color: var(--text-color);
   font-size: 26px;
 }
 
 .sidebar {
-  display: none;
-  flex-direction: column;
-  align-items: flex-end;
-  background: var(--second-dark-color);
-  position: absolute;
-  width: 200px;
+  width: 0;
   height: 100%;
-  padding: 20px;
+  padding-top: 80px;
+  background: var(--second-color);
+  display: flex;
+  overflow-x: hidden;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
   top: 0;
   right: 0;
+  z-index: 1;
+  transition: width .3s ease-out;
+}
+
+.sidebar .close-menu-button {
+  padding: 5px;
+  background: var(--primary-color);
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar .close-menu-button i {
+  width: 24px;
+  height: 24px;
+  color: var(--text-color);
+  font-size: 26px;
+}
+
+.sidebar .theme-button{
+  width: 90%;
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--primary-color);
+  cursor: pointer;
+  transition: .5s;
+}
+
+.sidebar .theme-button i {
+  color: var(--text-color);
+  font-size: 26px;
 }
