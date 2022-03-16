@@ -29,6 +29,21 @@ body {
   color: var(--text-color);
 }
 
+/* Re-usable styles */
+
+button {
+  color: var(--text-color);
+  background-color: var(--second-color);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar button {
+  background-color: var(--primary-color);
+}
+
 /* Styles */
 
 /* timer */
@@ -54,32 +69,21 @@ body {
 }
 
 .timer .start-button {
-  color: var(--text-color);
   font-size: 1.5rem;
   padding: 10px;
-  background-color: var(--second-color);
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
 }
 
 /* sidebar */
 .open-menu-button {
   padding: 5px;
-  background: var(--second-color);
-  border-radius: 5px;
   position: absolute;
   top: 20px;
   right: 20px;
-  border: none;
-  cursor: pointer;
 }
 
 .open-menu-button i {
   width: 24px;
   height: 24px;
-  color: var(--text-color);
   font-size: 26px;
 }
 
@@ -96,18 +100,14 @@ body {
   top: 0;
   right: 0;
   z-index: 1;
-  transition: width .3s ease-out;
+  transition: .4s ease-out;
 }
 
 .sidebar .close-menu-button {
   padding: 5px;
-  background: var(--primary-color);
-  border-radius: 5px;
   position: absolute;
   top: 20px;
   right: 20px;
-  border: none;
-  cursor: pointer;
 }
 
 .sidebar .close-menu-button i {
@@ -122,14 +122,42 @@ body {
   padding: 10px;
   position: absolute;
   bottom: 10px;
-  border: 0;
-  border-radius: 5px;
-  background: var(--primary-color);
-  cursor: pointer;
   transition: .5s;
 }
 
 .sidebar .theme-button i {
   color: var(--text-color);
   font-size: 26px;
+}
+
+/* Settings style */
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settings label{
+  font-size: 1.1rem;
+  align-self: flex-start;
+  margin-bottom: 2px;
+}
+
+.settings input[type='number']{
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  outline: none;
+}
+
+.settings .apply-config-button{
+  padding: 5px;
+  font-size: 1.1rem;
 }

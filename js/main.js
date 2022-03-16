@@ -2,6 +2,9 @@ const $openMenuButton = document.querySelector('.open-menu-button')
 const $closeMenuButton = document.querySelector('.close-menu-button')
 const $themeButton = document.querySelector('.theme-button')
 
+setTimeout(() => {
+  document.onload = openMenu()
+}, 500)
 $openMenuButton.addEventListener('click', openMenu)
 $closeMenuButton.addEventListener('click', closeMenu)
 $themeButton.addEventListener('click', toggleTheme)
@@ -31,7 +34,7 @@ function toggleTheme() {
     currentTheme = 'light'
     $themeButton.innerHTML = '<i class="fa-solid fa-sun"></i>'
     r.style.setProperty('--primary-color', '#ffffff')
-    r.style.setProperty('--second-color', '#f1f1ef')
+    r.style.setProperty('--second-color', '#e7e7e7')
     r.style.setProperty('--text-color', '#36362f')
   }
 }
