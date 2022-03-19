@@ -10,12 +10,14 @@
   </head>
   <body>
     <div class="timer">
+      <p class="status">pomodoro</p>
       <div class="display">
-        <span class="display-minutes">24</span>
+        <span class="display-minutes">25</span>
         <span>:</span>
-        <span class="display-seconds">35</span>
+        <span class="display-seconds">00</span>
       </div>
       <!--display-->
+      <div class="break-counter"></div>
       <button class="start-button">start</button>
     </div>
     <!--timer-->
@@ -23,14 +25,20 @@
     <div class="sidebar">
       <button class="close-menu-button"><i class="fa-solid fa-xmark"></i></button>
       <div class="settings">
-        <label for="minutes">Minutes</label>
-        <input type="number" name="minutes" id="minutes-set" min="0" max="60" value="25">
+        <label for="minutes">Pomodoro minutes</label>
+        <input type="number" name="minutes" id="minutes-input" min="1" max="60" value="25">
+        <label for="minutes">Pause minutes</label>
+        <input type="number" name="pause" id="pause-input" min="1" max="60" value="5">
         <label for="breaks">Breaks</label>
-        <input type="number" name="breaks" id="breaks-set" min="0" value="4">
-        <button class="apply-config-button">Apply</button>
+        <input type="number" name="breaks" id="breaks-input" min="0" value="4">
       </div>
       <button class="theme-button"><i class="fa-solid fa-sun"></i></button>
     </div><!--sidebar-->
+    <!-- audios -->
+    <audio src="audio/button-29.mp3" id="clickAudio"></audio>
+    <audio src="audio/end-timer.mp3" id="endTimerAudio"></audio>
+    <audio src="audio/timerFinished.mp3" id="finishedTimerAudio"></audio>
+    <audio src="audio/workTimeSound.mp3" id="workTimeAudio"></audio>
   </body>
   <script src="js/main.js"></script>
   <script src="https://kit.fontawesome.com/1aa6e5214d.js" crossorigin="anonymous"></script>

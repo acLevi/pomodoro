@@ -47,16 +47,26 @@ button {
 /* Styles */
 
 /* timer */
+
 .timer {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
-  gap: 200px;
+}
+
+.status {
+  margin-top: 50px;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  color: var(--text-color);
+  opacity: .2;
 }
 
 .timer .display {
+  margin-top: 25px;
+  margin-bottom: 25px;
   padding: 0 4rem;
   background-color: var(--second-color);
   border-radius: 15px;
@@ -71,6 +81,14 @@ button {
 .timer .start-button {
   font-size: 1.5rem;
   padding: 10px;
+}
+
+.break-counter {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
 /* sidebar */
@@ -138,8 +156,8 @@ button {
 }
 
 .settings label{
-  font-size: 1.1rem;
-  align-self: flex-start;
+  font-size: 1.2rem;
+  align-self: center;
   margin-bottom: 2px;
 }
 
@@ -155,9 +173,4 @@ button {
   border-radius: 5px;
   border: 1px solid var(--primary-color);
   outline: none;
-}
-
-.settings .apply-config-button{
-  padding: 5px;
-  font-size: 1.1rem;
 }
