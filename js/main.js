@@ -135,6 +135,7 @@ function timer() {
 
   displayMinutes.textContent = minutesTimer >= 10 ? minutesTimer : `0${minutesTimer}`
   displaySeconds.textContent = secondsTimer >= 10 ? secondsTimer : `0${secondsTimer}`
+  document.querySelector('title').textContent = `${minutesTimer >= 10 ? minutesTimer : '0' + minutesTimer} : ${secondsTimer >= 10 ? secondsTimer : '0' + secondsTimer}`
 }
 
 // Start timer
@@ -172,9 +173,11 @@ function pauseTimer() {
 function disableInputs() {
   inputMinutes.setAttribute('disabled', 'disabled')
   inputBreaks.setAttribute('disabled', 'disabled')
+  inputPauseMinutes.setAttribute('disabled', 'disabled')
 }
 
 function enableInputs() {
   inputMinutes.removeAttribute('disabled')
   inputBreaks.removeAttribute('disabled')
+  inputPauseMinutes.removeAttribute('disabled')
 }
